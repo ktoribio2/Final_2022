@@ -74,27 +74,44 @@ fisher.test(table1)
 # Discussion and Conclusion
 
 
-
 ## Females
 
 ## Results
 
+```{r}
+femaleData = filter (FinalData,sex == "F")
+```
 
 ## Descriptive Results
 
 ### Graphical Descriptive 
 
+```{r}
+barchartGC(~infected+treatment,data=femaleData)
+barchartGC(~infected+treatment,data=femaleData, type="percent")
+```
 
 ### Numerical Descriptive
 
+```{r}
+table1 <- xtabs(~infected + treatment, data=femaleData)
+rowPerc(table1)
+colPerc(table1)
+```
+
 ## Inferential Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 # Discussion and Conclusion
 
-
-
-
 ## LGBTQ
+
+# Results
 
 ## Methods
 
