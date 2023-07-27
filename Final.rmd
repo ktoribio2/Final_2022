@@ -24,17 +24,110 @@ mutate(across(where(is.character), as.factor))
 
 A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
+$H_0$ The COVID vaccine is not effective in treating COVID among subgroups.
+
+
+$H_A$ The COVID vaccine is effecttive in treating COVID among subgroups.
+
+# Methods 
+
+This statistical analysis we will be using is catergorical ~ categorical, because the COVID vaccine should be effective among subgroups
+
+The method we will be using to display the data us a bar chart, cross table, and chisquaar test
+
 ## Males
+
+## Results
+
+```{r}
+maleData = filter (FinalData,sex == "M")
+```
+
+## Descriptive Results
+
+### Graphical Descriptive 
+
+```{r}
+barchartGC(~infected+treatment,data=maleData)
+barchartGC(~infected+treatment,data=maleData, type="percent")
+
+```
+
+
+### Numerical Descriptive
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=maleData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+## Inferential Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+# Discussion and Conclusion
+
 
 
 ## Females
 
+## Results
+
+
+## Descriptive Results
+
+### Graphical Descriptive 
+
+
+### Numerical Descriptive
+
+## Inferential Results
+
+# Discussion and Conclusion
+
+
+
 
 ## LGBTQ
+
+## Methods
+
+## Results
+
+## Descriptive Results
+
+### Graphical Descriptive 
+
+### Numerical Descriptive
+
+## Inferential Results
+
+# Discussion and Conclusion
+
 
 
 
 ## Druggies
+
+## Methods
+
+## Results
+
+## Descriptive Results
+
+### Graphical Descriptive 
+
+### Numerical Descriptive
+
+## Inferential Results
+
+# Discussion and Conclusion
 
 
 # Overall Results and Conclusions
