@@ -94,36 +94,54 @@ barchartGC(~infected+treatment,data=femaleData, type="percent")
 ### Numerical Descriptive
 
 ```{r}
-table1 <- xtabs(~infected + treatment, data=femaleData)
-rowPerc(table1)
-colPerc(table1)
+table2 <- xtabs(~infected + treatment, data=femaleData)
+rowPerc(table2)
+colPerc(table2)
 ```
 
 ## Inferential Results
 
 ```{r}
-chisq.test(table1)
-chisqtestGC(table1)
-fisher.test(table1)
+chisq.test(table2)
+chisqtestGC(table2)
+fisher.test(table2)
 ```
 
 # Discussion and Conclusion
 
 ## LGBTQ
 
-# Results
-
-## Methods
-
 ## Results
+
+```{r}
+LGBTQData = filter (FinalData,LGBTQ == "gay")
+```
 
 ## Descriptive Results
 
 ### Graphical Descriptive 
 
+```{r}
+barchartGC(~infected+treatment,data=LGBTQData)
+barchartGC(~infected+treatment,data=LGBTQData, type="percent")
+
+```
+
 ### Numerical Descriptive
 
+```{r}
+table3 <- xtabs(~infected + treatment, data=LGBTQData)
+rowPerc(table3)
+colPerc(table3)
+```
+
 ## Inferential Results
+
+```{r}
+chisq.test(table3)
+chisqtestGC(table3)
+fisher.test(table3)
+```
 
 # Discussion and Conclusion
 
