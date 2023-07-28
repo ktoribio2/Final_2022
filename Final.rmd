@@ -29,7 +29,7 @@ $H_0$ The COVID vaccine is not effective in treating COVID among subgroups.
 
 $H_A$ The COVID vaccine is effecttive in treating COVID among subgroups.
 
-# Methods 
+## Methods 
 
 This statistical analysis we will be using is catergorical ~ categorical, because the COVID vaccine should be effective among subgroups
 
@@ -52,7 +52,7 @@ barchartGC(~infected+treatment,data=maleData)
 barchartGC(~infected+treatment,data=maleData, type="percent")
 
 ```
-Based on the graph, it is showing us that the group of people who contracted COVID and the ones who received the vaccine had less symptoms than those that received the placebo, while the group that didn't contract COVID showed no difference between those who were vaccinated and unvaccinated. 
+Based on the graph, it is showing us that the group of people who contracted COVID and the ones who received the vaccine had less symptoms than those that received the placebo, while the all male group that didn't contract COVID showed no difference between those who were vaccinated and unvaccinated. 
 
 ### Numerical Descriptive
 
@@ -63,7 +63,7 @@ colPerc(table1)
 ```
 The table shows that the group with COVID experience a 2x difference between the vaccinated and the un-vaccinated.The placebo group had around a 70% infected rate compared to the vaccinated group which only had about 30%. The Ok group had no significant difference between the un-vaccinated and vaccinated
 
-## Inferential Results
+### Inferential Results
 
 ```{r}
 chisq.test(table1)
@@ -71,8 +71,9 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-# Discussion and Conclusion
+The p-value is 0.0000001098, concluding that the p value is so small that we are rejecting the null hypothesis. Showing that COVID vaccine is effective between the male subgroup.
 
+Based on the Fisher exact test value, you become .35% more susceptible to contracting COVID if you are unvaccinated. 
 
 ## Females
 
@@ -90,6 +91,7 @@ femaleData = filter (FinalData,sex == "F")
 barchartGC(~infected+treatment,data=femaleData)
 barchartGC(~infected+treatment,data=femaleData, type="percent")
 ```
+This graph is showing that from the all female group who contracted COVID, the ones who received the vaccine had less symptoms than those with the placebo while the all the female group that did not contract COVID showed no difference between those who were vaccinated and not vaccinated. 
 
 ### Numerical Descriptive
 
@@ -98,6 +100,9 @@ table2 <- xtabs(~infected + treatment, data=femaleData)
 rowPerc(table2)
 colPerc(table2)
 ```
+This table shows that within the all female group those who weren't vaccinated had a 60% infection rate while those who were vaccinated had a 40% infection rate.
+
+In the all female group that contracted covid those with the vaccine had .67% less symptons compared to those who werent vaccinated
 
 ## Inferential Results
 
@@ -107,7 +112,7 @@ chisqtestGC(table2)
 fisher.test(table2)
 ```
 
-# Discussion and Conclusion
+Based on this chisq test, the p-value is 0.0002732, showing that there is a significant differecne, concluding that we are failing to reject the null hypothesis. This means that the COVID vaccine is ineffective within the female subgroup. 
 
 ## LGBTQ
 
