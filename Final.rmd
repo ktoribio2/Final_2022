@@ -52,7 +52,7 @@ barchartGC(~infected+treatment,data=maleData)
 barchartGC(~infected+treatment,data=maleData, type="percent")
 
 ```
-
+Based on the graph, it is showing us that the group of people who contracted COVID and the ones who received the vaccine had less symptoms than those that received the placebo, while the group that didn't contract COVID showed no difference between those who were vaccinated and unvaccinated. 
 
 ### Numerical Descriptive
 
@@ -61,7 +61,7 @@ table1 <- xtabs(~infected + treatment, data=maleData)
 rowPerc(table1)
 colPerc(table1)
 ```
-
+The table shows that the group with COVID experience a 2x difference between the vaccinated and the un-vaccinated.The placebo group had around a 70% infected rate compared to the vaccinated group which only had about 30%. The Ok group had no significant difference between the un-vaccinated and vaccinated
 
 ## Inferential Results
 
