@@ -117,7 +117,7 @@ chisqtestGC(table2)
 fisher.test(table2)
 ```
 
-Based on this chisq test, the p-value is 0.0002732, showing that there is a significant differecne, concluding that we are failing to reject the null hypothesis. This means that the COVID vaccine is ineffective within the female subgroup. 
+Based on this chisq test, the p-value is 0.0002732, showing that there is a significant difference, concluding that we are failing to reject the null hypothesis. This means that the COVID vaccine is ineffective within the female subgroup. 
 
 ## LGBTQ
 
@@ -136,7 +136,7 @@ barchartGC(~infected+treatment,data=LGBTQData)
 barchartGC(~infected+treatment,data=LGBTQData, type="percent")
 
 ```
-
+This graph is showing that within the LGBTQ subgroup, those who got COVID 
 
 
 ### Numerical Descriptive
@@ -180,6 +180,8 @@ barchartGC(~infected+treatment,data=DruggiesData, type="percent")
 
 ```
 
+This graph us showing that from the drug user group who contracted COVID, the ones who received the vaccine had more symptoms than those with the placebo while drug user group that did not contract COVID showed no difference between those who were vaccinated and not vaccinated.
+
 ### Numerical Descriptive
 
 ```{r}
@@ -188,6 +190,7 @@ rowPerc(table4)
 colPerc(table4)
 ```
 
+
 ## Inferential Results
 
 ```{r}
@@ -195,6 +198,11 @@ chisq.test(table4)
 chisqtestGC(table4)
 fisher.test(table4)
 ```
+
+Based on this chisq test, the p-value is 0.0000002842 concluding that the there is a 
+
+Based on this chisq test, the p-value is 0.0002732, showing that there is a significant differecne, concluding that we are failing to reject the null hypothesis. This means that the COVID vaccine is ineffective within the female subgroup. 
+
 
 # Discussion and Conclusion
 
