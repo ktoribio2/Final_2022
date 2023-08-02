@@ -115,6 +115,8 @@ fisher.test(table2)
 
 Based on this chisq test, the p-value is 0.0002732, showing that there is a significant difference, concluding that we are failing to reject the null hypothesis. This means that the COVID vaccine is ineffective within the female subgroup. 
 
+Fisher odds 1.50%
+
 ## LGBTQ
 
 ## Results
@@ -154,7 +156,7 @@ fisher.test(table3)
 
 The chisq test shows that the p-value for the LGBTQ group is 0.0000006668 showing that there is an effect between the COVID vaccine and the LGBT subgroup, concluding that we are rejecting the null hypothesis.  
 
-In the fisher exact test, the percentage 
+In the fisher exact test, the percentage odds ratio 0.18%
 
 ## Druggies
 
@@ -195,7 +197,7 @@ fisher.test(table4)
 
 Based on this chisq test, the p-value is 0.0000002842 concluding that the there is an effect between the COVID vaccine and the drug user data, concluding that we are rejecting the null hypothesis.
 
-The fisher exact test showed a p-value of 0.00000232, which is showing that there is a 
+The fisher exact test showed a p-value of 0.00000232, which is showing that there is a  odds ration 0.12%
 
 # Overall Results and Conclusions
 
