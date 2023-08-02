@@ -35,7 +35,7 @@ This statistical analysis we will be using is catergorical ~ categorical, becaus
 
 The method we will be using to display the data us a bar chart, cross table, and chisq test
 
-## Males
+# Males
 
 ## Results
 
@@ -63,7 +63,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-This table is showing that 69.57% of the unvaccinated male group experienced symptoms while only 30.43% of the vaccinated males experienced symptoms. It is aslo telling us that the male placebo group, 2.55% of them contracted COVID while only 1.15% of the vaccinated group conracted COVID.
+This table is showing that 69.57% of the unvaccinated male group experienced symptoms while only 30.43% of the vaccinated males experienced symptoms. It is also telling us that the male placebo group, 2.55% of them contracted COVID while only 1.15% of the vaccinated group contracted COVID.
 
 ### Inferential Results
 
@@ -77,7 +77,7 @@ The p-value is 0.0000000000001098, concluding that the p value is so small that 
 
 Based on the Fisher exact test, we got a p-value of 0.0000000000004631 concluding that we are rejecting the null hypothesis. The odds in this fisher test are showing males have a 2.24% chance of 
 
-## Females
+# Females
 
 ## Results
 
@@ -105,7 +105,7 @@ colPerc(table2)
 ```
 The data from this table shows that from the female group that were infected with COVID 19, those who were unvaccinated, 60% of them experienced symptoms while only 40% of the female group who were vaccinated experienced symptoms. It is also showing that within the female placebo group, 2.04% were infected with COVID, while only 1.37% of the vaccinated group contracted COVID.
 
-## Inferential Results
+### Inferential Results
 
 ```{r}
 chisq.test(table2)
@@ -117,7 +117,7 @@ Based on this chisq test, the p-value is 0.0002732, showing that there is a sign
 
 Fisher odds 1.50%
 
-## LGBTQ
+# LGBTQ
 
 ## Results
 
@@ -146,7 +146,7 @@ colPerc(table3)
 ```
 This table is showing that within the LGBTQ placebo group they experienced 15.38% of symptoms while the the vaccinated group experienced 84.62% of syptoms. It is also showing that 0.66% of the LGBTQ group who had the placebo contracted COVID, while 3.54% of the vaccinated group contracted COVID.
 
-## Inferential Results
+### Inferential Results
 
 ```{r}
 chisq.test(table3)
@@ -158,7 +158,7 @@ The chisq test shows that the p-value for the LGBTQ group is 0.0000006668 showin
 
 In the fisher exact test, the percentage odds ratio 0.18%
 
-## Druggies
+# Druggies
 
 ## Results
 
@@ -185,9 +185,9 @@ table4 <- xtabs(~infected + treatment, data=DruggiesData)
 rowPerc(table4)
 colPerc(table4)
 ```
-This table is showing that within the placebo drug user group, they experience 11.67% of symptoms while the vaccinated group experiened 88.33% of symptoms. It is also showing that 0.4% of the placebo group contracted COVID, while 3.06% of the vaccinated drug user group contracted COVID. There is a significant difference and effect between the placebo and COVID vaccine.
+This table is showing that within the placebo drug user group, they experience 11.67% of symptoms while the vaccinated group experienced 88.33% of symptoms. It is also showing that 0.4% of the placebo group contracted COVID, while 3.06% of the vaccinated drug user group contracted COVID. There is a significant difference and effect between the placebo and COVID vaccine.
 
-## Inferential Results
+### Inferential Results
 
 ```{r}
 chisq.test(table4)
@@ -195,10 +195,16 @@ chisqtestGC(table4)
 fisher.test(table4)
 ```
 
-Based on this chisq test, the p-value is 0.0000002842 concluding that the there is an effect between the COVID vaccine and the drug user data, concluding that we are rejecting the null hypothesis.
+Based on this chisq test, the p-value is 0.00000002842 concluding that the there is an effect between the COVID vaccine and the drug user data, concluding that we are rejecting the null hypothesis.
 
 The fisher exact test showed a p-value of 0.00000232, which is showing that there is a  odds ration 0.12%
 
 # Overall Results and Conclusions
 
+In conclusion, the effectiveness of the COVID vaccine varies between subgroups. Staring with the all male group, we are rejecting the null hypothesis. Based on the bar chart, numerical graph, and the chisq and fisher tests, we can conclude that men who received the COVID vaccine and contracted it ultimately experience less symptoms than those who received the placebo. The men that did not get vaccinated and did not contract COVID showed little to no difference between eachother. In the group that did receive the placebo had an infection rate of 2.55%, and those of them who got the vaccine had an infection rate of 1.15%, showing that the vaccine is effective in men, therefore we are rejecting the null hypothesis for the male group. 
 
+Moving onto the all female group, we are also rejecting the null hypothesis. Based on all of the tests we have run, we can conclude that women who received the COVID vaccine and contracted it also experienced less symptoms than the women who received the placebo. The female group that did not get vaccinated and did not contract COVID also showed little to no difference compared to each other. Within the group that did receive the placebo, they had an infection rate of 2.04%. The group that received the vaccine had an infection rate of 1.37%, concluding that the vaccine is effective in women, therefore rejecting the null hypothesis for the female subgroup.
+
+Comparing the male and female subgroups, women had a smaller percentage of infection with the COVID vaccine and placebo than then men by 0.22% and 0.51%. It is not a big difference, but so far within the data analysis women experience less symptoms with the COVID vaccine. 
+
+In the LGBTQ subgroup, we are failing to reject the null hypothesis. Based on our tests
