@@ -158,10 +158,7 @@ chisqtestGC(table3)
 fisher.test(table3)
 ```
 
-
-
-# Discussion and Conclusion
-
+The chisq test shows that the p-value for the LGBTQ group is 0.0000006668 showing that there is an effect between the COVID vaccine and the LGBT subgroup, concluding that we are rejecting the null hypothesis.  
 
 ## Druggies
 
