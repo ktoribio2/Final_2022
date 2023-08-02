@@ -73,10 +73,9 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+The p-value is 0.0000000000001098, concluding that the p value is so small that we are rejecting the null hypothesis. Showing that COVID vaccine is effective between the male subgroup.
 
-The p-value is 0.0000001098, concluding that the p value is so small that we are rejecting the null hypothesis. Showing that COVID vaccine is effective between the male subgroup.
-
-Based on the Fisher exact test, 
+Based on the Fisher exact test, we got a p-value of 0.0000000000004631 concluding that we are rejecting the null hypothesis. The odds in this fisher test are showing males have a 2.24% chance of 
 
 ## Females
 
@@ -196,6 +195,7 @@ fisher.test(table4)
 
 Based on this chisq test, the p-value is 0.0000002842 concluding that the there is an effect between the COVID vaccine and the drug user data, concluding that we are rejecting the null hypothesis.
 
+The fisher exact test showed a p-value of 0.00000232, which is showing that there is a 
 
 # Overall Results and Conclusions
 
