@@ -24,10 +24,10 @@ mutate(across(where(is.character), as.factor))
 
 A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
-$H_0$ The COVID vaccine is not effective in treating COVID among subgroups.
+$H_0$ The COVID vaccine has no effect on people in different subgroups.
 
 
-$H_A$ The COVID vaccine is effecttive in treating COVID among subgroups.
+$H_A$ The COVID vaccine does have an effect in different subgroups.
 
 ## Methods 
 
@@ -136,7 +136,7 @@ barchartGC(~infected+treatment,data=LGBTQData)
 barchartGC(~infected+treatment,data=LGBTQData, type="percent")
 
 ```
-This graph is showing that within the LGBTQ subgroup, those who got COVID 
+This graph is showing that within the LGBTQ subgroup, those who got COVID and got vaccinated experienced significantly more symptoms than those their unvaccinated counterpart. Those who did not get COVID and were both vaccinated and unvaccinated did not show any difference.
 
 
 ### Numerical Descriptive
@@ -146,8 +146,9 @@ table3 <- xtabs(~infected + treatment, data=LGBTQData)
 rowPerc(table3)
 colPerc(table3)
 ```
+This table is showing that within the LGBTQ group, those who were not vaccinated had a 15.38% infection rate while those who were not vaccinated had a 84.62 infection rate.
 
-
+In the all LGBTQ group that contracted COVID, those with the vaccine had 2.8x more symptoms than those who were not vaccinated.
 
 ## Inferential Results
 
