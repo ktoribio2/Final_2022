@@ -115,7 +115,7 @@ fisher.test(table2)
 
 Based on this chisq test, the p-value is 0.0002732, showing that there is a significant difference, concluding that we are rejecting the null hypothesis. This means that the COVID vaccine is effective within the female subgroup. 
 
-Fisher odds 1.50%
+For the fisher exact test show that the odds are about 1.50%, suggesting that there is a significant correlation between the variables, showing that there is strong evidence directing that we are rejecting the null hypothesis. 
 
 # LGBTQ
 
