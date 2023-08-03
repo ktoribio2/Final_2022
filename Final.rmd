@@ -113,7 +113,7 @@ chisqtestGC(table2)
 fisher.test(table2)
 ```
 
-Based on this chisq test, the p-value is 0.0002732, showing that there is a significant difference, concluding that we are failing to reject the null hypothesis. This means that the COVID vaccine is ineffective within the female subgroup. 
+Based on this chisq test, the p-value is 0.0002732, showing that there is a significant difference, concluding that we are rejecting the null hypothesis. This means that the COVID vaccine is effective within the female subgroup. 
 
 Fisher odds 1.50%
 
